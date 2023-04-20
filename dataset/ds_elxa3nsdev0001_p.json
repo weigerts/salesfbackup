@@ -1,0 +1,36 @@
+{
+	"name": "ds_elxa3nsdev0001_p",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_elxa3nsdev0001",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"pdate": {
+				"type": "string"
+			},
+			"vdesc": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().vdesc",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().pdate",
+					"type": "Expression"
+				},
+				"container": "backup"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

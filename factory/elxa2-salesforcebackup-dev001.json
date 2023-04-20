@@ -1,0 +1,9 @@
+{
+	"name": "elxa2-salesforcebackup-dev001",
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4e86ae4b-041a-4500-9075-1857c11a8d31",
+		"tenantId": "d2007bef-127d-4591-97ac-10d72fe28031"
+	}
+}

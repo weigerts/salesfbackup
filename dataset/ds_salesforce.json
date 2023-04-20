@@ -1,0 +1,24 @@
+{
+	"name": "ds_salesforce",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_salesforce_teste",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"item": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SalesforceObject",
+		"schema": [],
+		"typeProperties": {
+			"objectApiName": {
+				"value": "@dataset().item",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

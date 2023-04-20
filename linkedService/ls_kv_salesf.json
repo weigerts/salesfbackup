@@ -1,0 +1,11 @@
+{
+	"name": "ls_kv_salesf",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://elxkv-salesf-dev001.vault.azure.net/"
+		}
+	}
+}
