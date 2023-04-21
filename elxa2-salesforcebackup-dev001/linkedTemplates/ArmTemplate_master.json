@@ -1,0 +1,84 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "elxa2-salesforcebackup-dev001"
+		},
+		"ls_elxa3nsdev0001_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_elxa3nsdev0001'"
+		},
+		"ls_salesforce_teste_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_salesforce_teste'"
+		},
+		"ls_salesforce_teste_securityToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'securityToken' of 'ls_salesforce_teste'"
+		},
+		"ls_kv_salesf_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://elxkv-salesf-dev001.vault.azure.net/"
+		},
+		"ls_salesforce_teste_properties_typeProperties_environmentUrl": {
+			"type": "string",
+			"defaultValue": "https://electroluxla--elux.sandbox.my.salesforce.com"
+		},
+		"ls_salesforce_teste_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "svc-storage-azure@electrolux.com.elux"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "elxa2-salesforcebackup-dev001_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_elxa3nsdev0001_connectionString": {
+						"value": "[parameters('ls_elxa3nsdev0001_connectionString')]"
+					},
+					"ls_salesforce_teste_password": {
+						"value": "[parameters('ls_salesforce_teste_password')]"
+					},
+					"ls_salesforce_teste_securityToken": {
+						"value": "[parameters('ls_salesforce_teste_securityToken')]"
+					},
+					"ls_kv_salesf_properties_typeProperties_baseUrl": {
+						"value": "[parameters('ls_kv_salesf_properties_typeProperties_baseUrl')]"
+					},
+					"ls_salesforce_teste_properties_typeProperties_environmentUrl": {
+						"value": "[parameters('ls_salesforce_teste_properties_typeProperties_environmentUrl')]"
+					},
+					"ls_salesforce_teste_properties_typeProperties_username": {
+						"value": "[parameters('ls_salesforce_teste_properties_typeProperties_username')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

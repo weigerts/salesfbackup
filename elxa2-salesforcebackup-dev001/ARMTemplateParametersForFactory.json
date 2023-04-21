@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "elxa2-salesforcebackup-dev001"
+		},
+		"ls_elxa3nsdev0001_connectionString": {
+			"value": ""
+		},
+		"ls_salesforce_teste_password": {
+			"value": ""
+		},
+		"ls_salesforce_teste_securityToken": {
+			"value": ""
+		},
+		"ls_kv_salesf_properties_typeProperties_baseUrl": {
+			"value": "https://elxkv-salesf-dev001.vault.azure.net/"
+		},
+		"ls_salesforce_teste_properties_typeProperties_environmentUrl": {
+			"value": "https://electroluxla--elux.sandbox.my.salesforce.com"
+		},
+		"ls_salesforce_teste_properties_typeProperties_username": {
+			"value": "svc-storage-azure@electrolux.com.elux"
+		}
+	}
+}
