@@ -164,7 +164,7 @@
 				}
 			},
 			{
-				"name": "Set variable1",
+				"name": "Set variable Data",
 				"type": "SetVariable",
 				"dependsOn": [],
 				"userProperties": [],
@@ -181,7 +181,7 @@
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "Set variable1",
+						"activity": "Set variable Data",
 						"dependencyConditions": [
 							"Succeeded"
 						]
