@@ -1,0 +1,29 @@
+{
+	"name": "ls_databricks",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-4300720544875532.12.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_kv_salesf",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "databricks-token-sf",
+				"secretVersion": "5fd8a4a9b7c7445da5de2ae683155f2b"
+			},
+			"newClusterNodeType": "Standard_DS3_v2",
+			"newClusterNumOfWorker": "2:8",
+			"newClusterVersion": "11.3.x-scala2.12",
+			"newClusterInitScripts": [],
+			"clusterOption": "Autoscaling"
+		},
+		"connectVia": {
+			"referenceName": "irSales",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
