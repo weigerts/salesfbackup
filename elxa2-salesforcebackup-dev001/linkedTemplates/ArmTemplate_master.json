@@ -31,6 +31,10 @@
 			"type": "string",
 			"defaultValue": "svc-storage-azure@electrolux.com.elux"
 		},
+		"ls_to_blobstorage_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "cstosa-dv-secret"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -75,6 +79,9 @@
 					},
 					"ls_salesforce_teste_properties_typeProperties_username": {
 						"value": "[parameters('ls_salesforce_teste_properties_typeProperties_username')]"
+					},
+					"ls_to_blobstorage_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('ls_to_blobstorage_properties_typeProperties_connectionString_secretName')]"
 					}
 				}
 			},

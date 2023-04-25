@@ -23,6 +23,9 @@
 		"ls_salesforce_teste_properties_typeProperties_username": {
 			"value": "svc-storage-azure@electrolux.com.elux"
 		},
+		"ls_to_blobstorage_properties_typeProperties_connectionString_secretName": {
+			"value": "cstosa-dv-secret"
+		},
 		"containerUri": {
 			"value": ""
 		},
