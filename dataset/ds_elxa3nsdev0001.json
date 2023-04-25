@@ -2,7 +2,7 @@
 	"name": "ds_elxa3nsdev0001",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_elxa3nsdev0001",
+			"referenceName": "ls_to_blobstorage",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
