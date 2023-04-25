@@ -1,0 +1,17 @@
+{
+	"name": "ls_to_blobstorage",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_kv_salesf",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "cstosa-dv-secret"
+			}
+		}
+	}
+}
